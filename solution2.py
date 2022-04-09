@@ -32,9 +32,9 @@ def find_lanes(frame: np.ndarray) -> np.ndarray:
     canny_frame = cv2.Canny(gray_frame, 75, 150)
     corners = np.array([
                            [125, gray_frame.shape[0]],
-                           [895, gray_frame.shape[0]],
-                           [520, 320],
-                           [440, 320]
+                           [890, gray_frame.shape[0]],
+                           [525, 325],
+                           [445, 325]
                        ])
     mask = np.zeros_like(canny_frame)
     cv2.fillPoly(mask, [corners], 255)
